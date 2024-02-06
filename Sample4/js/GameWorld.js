@@ -59,4 +59,8 @@ class GameWorld{
 		this.skyIm.y+=evt.deltaY*0.1	
 	}
 
+	react2Resize(){
+	
+	}
+
 }
