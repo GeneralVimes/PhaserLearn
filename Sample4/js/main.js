@@ -136,6 +136,20 @@ class Example extends Phaser.Scene
         if (window.main) {
             window.main.handleResize(window.innerWidth, window.innerHeight);
         }
-    }, false);   
+    }, false); 
 
+	//  обробка максимізації цілого вікна бразуера
+    window.manualSizeChecker = {
+        lastW: 0,//window.innerWidth,
+        lastH: window.innerHeight,
+        timer: setInterval(function () {
+            if ((window.innerWidth != window.manualSizeChecker.lastW) || (window.innerHeight != window.manualSizeChecker.lastH)) {
+				if (window.main) {
+                    window.main.handleResize(window.innerWidth, window.innerHeight);
+                    window.manualSizeChecker.lastW = window.innerWidth;
+                    window.manualSizeChecker.lastH = window.innerHeight;
+                }
+            }
+        }, 100)
+    }
 }
