@@ -31,7 +31,7 @@ class Example extends Phaser.Scene
 	//параметри створюваної у Phaser сцени
     const config = {
         type: Phaser.AUTO,
-        width: 800,
+        width: 1000,
         height: 600,
         scene: Example,
         physics: {
@@ -42,5 +42,5 @@ class Example extends Phaser.Scene
         }
     };
 
-    const game = new Phaser.Game(config);
+    window.game = new Phaser.Game(config);
 }

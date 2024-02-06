@@ -4,6 +4,8 @@ class MovingLogo extends Phaser.GameObjects.Image{
 
 		this.vx = 100;
 		this.vy = -100;
+
+		this.scale = 0.1+0.4*Math.random();
 	}
 
 	step(dt){
@@ -20,13 +22,13 @@ class MovingLogo extends Phaser.GameObjects.Image{
 			this.vy=-this.vy
 		}
 		//від правого краю
-		if (this.x>800-this.displayWidth/2){
-			this.x=800-this.displayWidth/2
+		if (this.x>window.game.config.width-this.displayWidth/2){
+			this.x=window.game.config.width-this.displayWidth/2
 			this.vx=-this.vx
 		}		
 		//від нижнього краю
-		if (this.y>600-this.displayHeight/2){
-			this.y=600-this.displayHeight/2
+		if (this.y>window.game.config.height-this.displayHeight/2){
+			this.y=window.game.config.height-this.displayHeight/2
 			this.vy=-this.vy
 		}		
 	}
