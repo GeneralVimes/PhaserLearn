@@ -10,6 +10,8 @@ class Example extends Phaser.Scene
             this.load.image('TX_RED', 'assets/red.png');
         }
 
+		
+
         create ()
         {
 			//створюємо зображення з кодом TX_SKY по центру екрана (400,300)
