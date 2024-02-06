@@ -22,13 +22,13 @@ class MovingLogo extends Phaser.GameObjects.Image{
 			this.vy=-this.vy
 		}
 		//від правого краю
-		if (this.x>window.game.config.width-this.displayWidth/2){
-			this.x=window.game.config.width-this.displayWidth/2
+		if (this.x>window.main.sizeManager.gameWidth-this.displayWidth/2){
+			this.x=window.main.sizeManager.gameWidth-this.displayWidth/2
 			this.vx=-this.vx
 		}		
 		//від нижнього краю
-		if (this.y>window.game.config.height-this.displayHeight/2){
-			this.y=window.game.config.height-this.displayHeight/2
+		if (this.y>window.main.sizeManager.gameHeight-this.displayHeight/2){
+			this.y=window.main.sizeManager.gameHeight-this.displayHeight/2
 			this.vy=-this.vy
 		}		
 	}
